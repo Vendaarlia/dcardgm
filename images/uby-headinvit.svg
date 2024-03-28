@@ -2,37 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="434.67746mm"
-   height="434.58136mm"
-   viewBox="0 0 434.67746 434.58136"
+   width="433.41898mm"
+   height="216.4576mm"
+   viewBox="0 0 433.41898 216.4576"
    version="1.1"
    id="svg52731"
-   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
-   sodipodi:docname="uby-circle.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview52733"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.2102413"
-     inkscape:cx="794.32537"
-     inkscape:cy="953.66609"
-     inkscape:window-width="1440"
-     inkscape:window-height="872"
-     inkscape:window-x="0"
-     inkscape:window-y="28"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
   <defs
      id="defs52728">
     <linearGradient
@@ -477,15 +453,26 @@
          offset="1"
          id="stop11466" />
     </linearGradient>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath55560">
+      <rect
+         style="fill:#00546e;stroke:#ffffff;stroke-width:0.0897502"
+         id="rect55562"
+         width="147.27771"
+         height="73.425407"
+         x="-126.48627"
+         y="149.8773"
+         transform="scale(1,-1)" />
+    </clipPath>
   </defs>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(105.33449,102.76949)">
+     transform="translate(104.07603,-114.94663)">
     <g
        id="g51949"
-       transform="matrix(2.9479932,0,0,-2.9479932,268.80463,-326.89064)">
+       transform="matrix(2.9479932,0,0,-2.9479932,268.80463,-326.89064)"
+       clip-path="url(#clipPath55560)">
       <g
          id="g10602"
          transform="translate(-157.18867,-307.09999)"
