@@ -304,17 +304,19 @@ p {
   background-color: #07cad5;
 }
 .uby-inv {
+  height: max-content;
+  width: 100dvw;
   background: linear-gradient(0deg, #07cad5 0%, #027a8c 50%, #00546e 100%), url(/images/uby-bg-path.svg);
   background-blend-mode: multiply;
   position: relative;
 }
-.uby-inv canvas {
+.uby-inv #canvas {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 99;
   pointer-events: none;
   transform: rotate(180deg);
 }

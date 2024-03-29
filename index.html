@@ -60,26 +60,26 @@
 		<div class="uby-inv">
 			<canvas id="canvas"></canvas>
 			<div class="uby-inv-area">
-				<div class="uby-inv-area-circle">
+				<div class="uby-inv-area-circle ww-animation">
 					<img src="images/uby-circle.svg" alt="">
 				</div>
-				<div class="modal-decor">
+				<div class="modal-decor ww-animation">
 					<img src="/images/uby-decor.svg" alt="" class="decor Left">
 					<img src="/images/uby-decor.svg" alt="" class="decor Right">
 				</div>
-				<div class="uby-inv-area-header">
+				<div class="uby-inv-area-header ww-animation">
 					<h1><span>selamat hari raya</span><br>Idul Fitri</h1>
 					<p>1 Syawal 1445 H</p>
 				</div>
 				<div class="uby-inv-area-body ww-animation">
 					<img src="images/uby-greet.png" alt="">
 					<div class="ucapan">
-						<div class="kata">
+						<div class="kata ww-animation">
 							<h3>Kami Keluarga Besar</h3>
 							<h1>KUSNUL<br>WAKHID &<br>MANZIYA</h1>
 							<h2>Mengucapkan<br>Mohon Maaf Lahir dan Batin</h2>
 						</div>
-						<a href="#uby-wish">Harapan</a>
+						<a href="#uby-wish ww-animation">Harapan</a>
 					</div>
 				</div>
 				<div class="uby-inv-area-footer">
@@ -159,8 +159,96 @@
 	<script type="text/javascript" src="js/wow.min.js"></script>
 	<script type="text/javascript" src="js/smooth-scroll.js"></script>
 
-	<script type="text/javascript" src="js/sa-js.js?v=2"></script>
+	<script type="text/javascript" src="js/sa-js.js"></script>
 
+		<!-- snow effect -->
+		<script>
+			// snow effect
+			window.onresize = function () {
+				var H = $('.uby-inv').height();
+				canvas.height = H;
+			}
+			window.onload = function () {
+				//canvas init
+				var canvas = document.getElementById("canvas");
+				var ctx = canvas.getContext("2d");
+	
+				//canvas dimensions
+	
+				var W = window.innerWidth;
+				var H = $('.uby-inv').height();
+				canvas.width = W;
+				canvas.height = H;
+	
+				//snowflake particles
+				var mp = 15; //max particles
+				var particles = [];
+				for (var i = 0; i < mp; i++) {
+					particles.push({
+						x: Math.random() * W, //x-coordinate
+						y: Math.random() * H, //y-coordinate
+						r: Math.random() * 4 + 2, //radius
+						d: Math.random() * mp //density
+					})
+				}
+	
+				//Lets draw the flakes
+				function draw() {
+					ctx.clearRect(0, 0, W, H);
+	
+					ctx.fillStyle = "rgba(228, 198, 97, 0.3)";
+					ctx.beginPath();
+					for (var i = 0; i < mp; i++) {
+						var p = particles[i];
+						ctx.moveTo(p.x, p.y);
+						ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+					}
+					ctx.fill();
+					update();
+				}
+	
+				//Function to move the snowflakes
+				//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+				var angle = 0;
+				function update() {
+					angle += 0.01;
+					for (var i = 0; i < mp; i++) {
+						var p = particles[i];
+						//Updating X and Y coordinates
+						//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+						//Every particle has its own density which can be used to make the downward movement different for each flake
+						//Lets make it more random by adding in the radius
+						p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+						p.x += Math.sin(angle) * 2;
+	
+						//Sending flakes back from the top when it exits
+						//Lets make it a bit more organic and let flakes enter from the left and right also.
+						if (p.x > W + 5 || p.x < -5 || p.y > H) {
+							if (i % 3 > 0) //66.67% of the flakes
+							{
+								particles[i] = { x: Math.random() * W, y: -10, r: p.r, d: p.d };
+							}
+							else {
+								//If the flake is exitting from the right
+								if (Math.sin(angle) > 0) {
+									//Enter from the left
+									particles[i] = { x: -5, y: Math.random() * H, r: p.r, d: p.d };
+								}
+								else {
+									//Enter from the right
+									particles[i] = { x: W + 5, y: Math.random() * H, r: p.r, d: p.d };
+								}
+							}
+						}
+					}
+				}
+	
+				//animation loop
+				setInterval(draw, 33);
+			}
+		</script>
+
+	<!-- form function -->
 	<script type="module">
 		import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 		const supabase = createClient('https://mwdysphscipeogzunbam.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13ZHlzcGhzY2lwZW9nenVuYmFtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTExNjIwMjAsImV4cCI6MjAyNjczODAyMH0.pD-0FeALe5uMCTCLe3Ai6GLRtR3nqSQdVvOEOXGzfzA')
@@ -228,93 +316,6 @@
 					testimonyList.appendChild(testimonialItem);
 				});
 			}
-		}
-	</script>
-
-	<!-- snow effect -->
-	<script>
-		// snow effect
-		window.onresize = function () {
-			var H = $('.uby-inv').height();
-			canvas.height = H;
-		}
-		window.onload = function () {
-			//canvas init
-			var canvas = document.getElementById("canvas");
-			var ctx = canvas.getContext("2d");
-
-			//canvas dimensions
-
-			var W = window.innerWidth;
-			var H = $('.uby-inv').height();
-			canvas.width = W;
-			canvas.height = H;
-
-			//snowflake particles
-			var mp = 15; //max particles
-			var particles = [];
-			for (var i = 0; i < mp; i++) {
-				particles.push({
-					x: Math.random() * W, //x-coordinate
-					y: Math.random() * H, //y-coordinate
-					r: Math.random() * 4 + 2, //radius
-					d: Math.random() * mp //density
-				})
-			}
-
-			//Lets draw the flakes
-			function draw() {
-				ctx.clearRect(0, 0, W, H);
-
-				ctx.fillStyle = "rgba(228, 198, 97, 0.3)";
-				ctx.beginPath();
-				for (var i = 0; i < mp; i++) {
-					var p = particles[i];
-					ctx.moveTo(p.x, p.y);
-					ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
-				}
-				ctx.fill();
-				update();
-			}
-
-			//Function to move the snowflakes
-			//angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
-			var angle = 0;
-			function update() {
-				angle += 0.01;
-				for (var i = 0; i < mp; i++) {
-					var p = particles[i];
-					//Updating X and Y coordinates
-					//We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
-					//Every particle has its own density which can be used to make the downward movement different for each flake
-					//Lets make it more random by adding in the radius
-					p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
-					p.x += Math.sin(angle) * 2;
-
-					//Sending flakes back from the top when it exits
-					//Lets make it a bit more organic and let flakes enter from the left and right also.
-					if (p.x > W + 5 || p.x < -5 || p.y > H) {
-						if (i % 3 > 0) //66.67% of the flakes
-						{
-							particles[i] = { x: Math.random() * W, y: -10, r: p.r, d: p.d };
-						}
-						else {
-							//If the flake is exitting from the right
-							if (Math.sin(angle) > 0) {
-								//Enter from the left
-								particles[i] = { x: -5, y: Math.random() * H, r: p.r, d: p.d };
-							}
-							else {
-								//Enter from the right
-								particles[i] = { x: W + 5, y: Math.random() * H, r: p.r, d: p.d };
-							}
-						}
-					}
-				}
-			}
-
-			//animation loop
-			setInterval(draw, 33);
 		}
 	</script>
 
