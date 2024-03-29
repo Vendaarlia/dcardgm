@@ -9,6 +9,9 @@
    id="svg22950"
    inkscape:version="1.2 (dc2aeda, 2022-05-15)"
    sodipodi:docname="uby-bg-path.svg"
+   inkscape:export-filename="uby-bg-path.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,14 +25,17 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.2102413"
-     inkscape:cx="195.01401"
-     inkscape:cy="492.29147"
+     inkscape:cx="204.52689"
+     inkscape:cy="140.31496"
      inkscape:window-width="1440"
-     inkscape:window-height="872"
+     inkscape:window-height="900"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs22947">
     <clipPath
