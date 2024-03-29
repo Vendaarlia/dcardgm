@@ -334,17 +334,17 @@ p {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: -25%;
+  top: -50%;
   width: 100%;
 }
 @media (max-width: 767px) {
   .uby-inv-area-circle {
-    top: -30%;
+    top: -60%;
   }
 }
 @media (max-width: 480px) {
   .uby-inv-area-circle {
-    top: -20%;
+    top: -60%;
   }
 }
 .uby-inv-area-circle img {
@@ -359,29 +359,33 @@ p {
 .uby-inv-area-header {
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50vh;
-  padding: 30px 50px;
+  height: 40vh;
 }
 @media (max-width: 767px) {
   .uby-inv-area-header {
-    padding: 20px 30px;
+    margin-bottom: 5rem;
   }
 }
 .uby-inv-area-header h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 9rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
   background-image: repeating-linear-gradient(to right, #a2682a 0%, #be8c3c 8%, #be8c3c 18%, #d3b15f 27%, #faf0a0 35%, #ffffc2 40%, #faf0a0 50%, #d3b15f 58%, #be8c3c 67%, #b17b32 77%, #bb8332 83%, #d4a245 88%, #e1b453 93%, #a4692a 100%);
   background-size: 150%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 9rem;
-  font-weight: 900;
-  filter: drop-shadow(0 0 1px rgba(255, 200, 0, .3));
+  filter: drop-shadow(1px 2px 1px #00546e);
   animation: MoveBackgroundPosition 6s ease-in-out infinite;
 }
 
+// rgba(255, 200, 0, .3)
 @keyframes MoveBackgroundPosition { 
   0% {
       background-position: 0% 50%
@@ -397,8 +401,23 @@ p {
 }
 @media (max-width: 767px) {
   .uby-inv-area-header h1 {
-    font-size: 6rem;
+    font-size: 7.3rem;
   }
+}
+.uby-inv-area-header h1 span {
+  font-family: "Yellowtail", cursive;
+  font-size: 4rem;
+}
+
+.uby-inv-area-header p {
+  color: #fff;
+  text-shadow: 1px 1px #a4692a;
+  font-size: 1rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 7px 15px 7px 15px;
+  border-radius: 50px;
+  background-color: #ebb452;
 }
 .uby-inv-area-body {
   position: absolute;
@@ -412,6 +431,66 @@ p {
 }
 .uby-inv-area-body img {
   max-width: 700px;
+}
+.uby-inv-area-body .ucapan {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.uby-inv-area-body .ucapan h3 {
+  font-family: "Yellowtail", cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #00546e;
+  margin: 0;
+}
+.uby-inv-area-body .ucapan h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 4.5rem;
+  text-align: center;
+  color: #00546e;
+  margin: 0;
+}
+.uby-inv-area-body .ucapan h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #00546e;
+  margin: 0;
+}
+.uby-inv-area-body .ucapan a {
+  color: #a4692a;
+  font-weight: bold;
+  text-shadow: 1px 1px #ffffff;
+  outline: 0 !important;
+  border: none !important;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 2rem;
+  padding: 8px 70px 10px 70px;
+  background-image: repeating-linear-gradient(45deg, #a2682a 0%, #be8c3c 8%, #be8c3c 18%, #d3b15f 27%, #faf0a0 35%, #ffffc2 40%, #faf0a0 50%, #d3b15f 58%, #be8c3c 67%, #b17b32 77%, #bb8332 83%, #d4a245 88%, #e1b453 93%, #a4692a 100%);
+  background-size: 150%;
+  filter: drop-shadow(0 0 1px rgba(255, 200, 0, .3));
+  animation: MoveBackgroundPosition 6s ease-in-out infinite;
+}
+@keyframes MoveBackgroundPosition { 
+  0% {
+      background-position: 0% 50%
+  }
+  
+  50% {
+    background-position: 100% 50%
+  }
+  
+  100% {
+    background-position: 0% 50%
+  }
+}
+.uby-inv-area-body .ucapan a:hover {
+  text-shadow: 1px 2px #fff;
+  box-shadow: 1px 2px 5px #a4692a;
 }
 .uby-inv-area-footer {
   padding: 50px 20px 50px 0;
@@ -499,13 +578,36 @@ p {
   background: none;
 }
 .uby-wish-area form .form-group button {
-  width: 100%;
-  padding: 10px 7px;
-  text-align: center;
-  outline: none;
-  border: none;
-  background-color: #ebb452;
-  color: white;
+  align-self: flex-end;
+  color: #a4692a;
+  font-weight: bold;
+  text-shadow: 1px 1px #ffffff;
+  outline: 0 !important;
+  border: none !important;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 70px 10px 70px;
+  background-image: repeating-linear-gradient(45deg, #a2682a 0%, #be8c3c 8%, #be8c3c 18%, #d3b15f 27%, #faf0a0 35%, #ffffc2 40%, #faf0a0 50%, #d3b15f 58%, #be8c3c 67%, #b17b32 77%, #bb8332 83%, #d4a245 88%, #e1b453 93%, #a4692a 100%);
+  background-size: 150%;
+  filter: drop-shadow(0 0 1px rgba(255, 200, 0, .3));
+  animation: MoveBackgroundPosition 6s ease-in-out infinite;
+}
+@keyframes MoveBackgroundPosition { 
+  0% {
+      background-position: 0% 50%
+  }
+  
+  50% {
+    background-position: 100% 50%
+  }
+  
+  100% {
+    background-position: 0% 50%
+  }
+}
+.uby-wish-area form .form-group button:hover {
+  text-shadow: 1px 2px #fff;
+  box-shadow: 1px 2px 5px #00546e;
 }
 .uby-testimony {
   max-width: 700px;
@@ -767,7 +869,7 @@ p {
   border-radius: 15px;
   z-index: 2;
   transition: 0.5s;
-  background-image: url("/images/uby-moon.svg");
+  background-image: url("/images/card.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -792,8 +894,9 @@ p {
 }
 #myModal .modal-dialog .modal-content .modal-body-text button {
   align-self: flex-end;
-  color: #000;
+  color: #a4692a;
   font-weight: bold;
+  text-shadow: 1px 1px #ffffff;
   outline: 0 !important;
   border: none !important;
   border-radius: 5px;
@@ -820,12 +923,8 @@ p {
 }
 
 #myModal .modal-dialog .modal-content .modal-body-text button:hover {
-  -webkit-transition: all 4s ease-in-out;
-  -moz-transition: all 4s ease-in-out;
-  -ms-transition: all 4s ease-in-out;
-  -o-transition: all 4s ease-in-out;
-  transition: all 4s ease-in-out;
-  background-color: #ebb452;
+  text-shadow: 1px 2px #fff;
+  box-shadow: 1px 2px 5px #00546e;
 }
 .borderimage {
   width: 100%;
