@@ -831,14 +831,15 @@ p {
 }
 
 .templat-list {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   background-color: #00546e;
   padding: 5%;
 }
 
-.templat-list img {
-  width: 30%;
+.templat-list .a img {
+  width: 50%;
 }
 
 @-webkit-keyframes slowrotate {
