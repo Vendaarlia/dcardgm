@@ -929,3 +929,20 @@ p {
     transform: translate3d(0px, 0%, 0px) rotateY(0deg);
   }
 }
+
+.pwarning {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.templat-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #00546e;
+  padding: 5%;
+}
+
+.templat-list img {
+  width: 30%;
+}
