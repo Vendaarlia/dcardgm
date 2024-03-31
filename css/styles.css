@@ -818,6 +818,29 @@ p {
 .borderimage img {
   width: 100%;
 }
+
+.uby-testimony .pwarning {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.pwarning {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.templat-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #00546e;
+  padding: 5%;
+}
+
+.templat-list img {
+  width: 30%;
+}
+
 @-webkit-keyframes slowrotate {
   0% {
     transform: rotate(0deg);
@@ -930,19 +953,3 @@ p {
   }
 }
 
-.pwarning {
-  text-align: center;
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-.templat-list {
-  display: flex;
-  justify-content: space-between;
-  background-color: #00546e;
-  padding: 5%;
-}
-
-.templat-list img {
-  width: 30%;
-}
