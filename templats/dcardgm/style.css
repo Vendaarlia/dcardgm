@@ -1,0 +1,347 @@
+:root{
+    --black: #0a0809;
+    --ijo: #c9f422;
+    --pink: #ed89fb;
+    --crem: #c9d1f5;
+
+    --pro: "Tac One", sans-serif;
+    --sub: "Dosis", sans-serif;
+    --txt: "Ubuntu Mono", monospace;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--crem);
+    box-sizing: border-box;
+}
+
+a {
+    font-family: var(--txt);
+    color: var(--pink);
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: var(--pro);
+}
+
+h3 {
+    margin: 0;
+    font-family: var(--sub);
+    font-weight: 100;
+}
+
+p {
+    margin: 0;
+    font-size: small;
+    font-family: var(--txt);
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-nav {
+    width: 75vw;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.wrap-nav a:hover {
+    text-decoration: underline;
+}
+
+.wrap-nav .radius {
+    margin: 0 4px;
+    padding: 2px 15px;
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.wrap-nav .radius:hover {
+    color: var(--crem);
+    background-color: var(--pink);
+    text-decoration: none;
+}
+
+/* hero */
+.up-hero {
+    width: 100%;
+    background: url("images/portal-dungeon.gif");
+    background-size: 200%;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+.txt-1 h1 {
+    font-size: 4.7rem;
+    text-align: center;
+    line-height: 65%;
+    color: var(--ijo);
+    margin: 5% auto;
+}
+.txt-1 h1 span {
+    color: var(--pink);
+}
+.txt-1 img {
+    width: 20%;
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: rotateZ(20deg);
+    filter: drop-shadow(2px 2px var(--black)) drop-shadow(-2px -2px var(--black));
+    -webkit-filter: drop-shadow(2px 2px var(--black)) drop-shadow(-2px -2px var(--black));
+    -webkit-transform: rotateZ(20deg);
+    -moz-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    -o-transform: rotateZ(20deg);
+}
+.txt-2 h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-top: -5%;
+}
+
+.sub-hero {
+    width: 100%;
+    height: 20vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-cta {
+    width: 35vw;
+    height: 30px;
+    font-family: var(--sub);
+    font-weight: 900;
+    text-align: end;
+    padding-right: 10%;
+    margin-left: -25%;
+    background-color: var(--ijo);
+    border: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.p-cta {
+    width: 70vw;
+    margin: 0;
+}
+
+/* anggota */
+.anggota {
+    margin-top: 0;
+}
+.txt-perwira {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--ijo);
+    margin: 5% auto;
+}
+.list-fame{
+    width: 95vw;
+    height: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+.hall-0f-fame {
+    width: 100%;
+    height: 100%;
+    background-color: var(--crem);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.hall-0f-fame h1 {
+    color: var(--pink);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3.5%;
+}
+
+.exsekutif {
+    width: 100%;
+    height: 15vh;
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+.grup-exsekutif {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10%;
+}
+.list-exsekutif {
+    width: 100%;
+    height: 100%;
+    color: var(--pink);
+    font-weight: 600;
+    background-color: var(--crem);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.list-exsekutif .big {
+    font-size: 1.4rem;
+}
+
+/* DCARDGM */
+.dcardgm {
+    width: 100%;
+}
+.dcardgm h1 {
+    color: var(--pink);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3.5%;
+}
+.wrap-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+.col-about {
+    width: 100%;
+    height: 60vh;
+}
+.about {
+    height: 100%;
+    background-color: var(--ijo);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.about h1 {
+    color: var(--black);
+    font-size: 2rem;
+}
+.about h3 {
+    color: var(--black);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.group-about {
+    padding: 0 2%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+.group-about p {
+    width: 70%;
+    font-weight: 100;
+    color: var(--black);
+    margin-bottom: 2.5%;
+}
+.group-about a {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2.5%;
+    font-family: var(--sub);
+    font-weight: 900;
+    text-align: center;
+    color: var(--crem);
+    background-color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.group-about a:hover {
+    background-color: var(--black);
+    color: var(--pink);
+}
+
+.dungeon {
+    width: 100%;
+    height: 30vh;
+    color: var(--black);
+    background-color: var(--crem);
+    border-radius: 5px;
+    background-image: none;
+    background-size: cover;
+    background-position: bottom;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.dungeon h1 {
+    font-family: var(--sub);
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.dungeon ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.8rem;
+    list-style: none;
+    overflow: hidden;
+}
+.dungeon li {
+    width: 100%;
+    padding-bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.dungeon li a {
+    font-family: var(--pro);
+    font-size: 2.3rem;
+    color: var(--pink);
+}
+.dungeon li:hover {
+    background-color: var(--black);
+}
+
+
+
+

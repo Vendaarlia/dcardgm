@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCARDGM</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Tac+One&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="wrap-nav">
+            <a class="radius" href="">Mamber</a>
+            <a href="#"><span>DCARDGM</span></a>
+            <a class="radius" href="">Guild</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="wrapper">
+            <div class="responsive">
+                <div class="up-hero">
+                    <div class="txt-1">
+                        <h1>DUNGEON<br><span>CARD GUILD</span><br>MASTER</h1>
+                        <img src="/images/hand&sield.png" alt="">
+                    </div>
+                    <div class="txt-2">
+                        <h3><span>*</span>DOMAIN NAME FOR PEJUANG<span>*</span></h3>
+                    </div>
+                </div>
+                <div class="sub-hero">
+                    <div class="cta">
+                        <div class="deco"></div>
+                        <button class="btn-cta"><span>#</span> Join Guild</button>
+                        <div class="deco"></div>
+                    </div>
+                    <p class="p-cta"># mau join kita??? udah siap buat menunaikan tugas harian mu??? udah siap buat
+                        menghuni dungeon online???</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="anggota">
+        <div class="perwira-guild">
+            <h1 class="txt-perwira">HALL OF FAME</h1>
+            <div class="list-fame">
+                <div class="hall-0f-fame">
+                    <h1>LIST OF ADVENTURER THAT CONTRIBUTE</h1>
+                </div>
+            </div>
+            <div class="exsekutif">
+                <div class="grup-exsekutif">
+                    <div class="list-exsekutif">
+                        <a class="big" href="http://.dcardgm.com">BLUEVILS</a>
+                        <p>Status</p>
+                    </div>
+                </div>
+                <div class="grup-exsekutif">
+                    <div class="list-exsekutif">
+                        <a href="http://.dcardgm.com">REDANTONI</a>
+                        <p>Status</p>
+                    </div>
+                    <div class="list-exsekutif">
+                        <a href="http://.dcardgm.com">MOHAZART</a>
+                        <p>Status</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dcardgm">
+        <h1>GUILD PROFILE</h1>
+        <div class="wrap-about">
+            <div class="col-about">
+                <div class="about">
+                    <h1>DCARDGM.COM is???</h1>
+                    <h3>Adalah sebuah GUILD Domain gratis untuk yang pengen website murah dan tanpa ribet dengan
+                        teknikal.</h3>
+                    <div class="group-about">
+                        <p>Dengan fasilitas sebuah softwear untuk para angotanya dalam existensi online DUNGEON online
+                            dengan tujuan bermacam-macam entah itu untuk profesional cari uang atau hanya kesenangan
+                            dalam bersenang-senang kami tak membatasi-nya.</p>
+                        <a href="http://">Joint Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-about">
+                <div class="dungeon ul1">
+                    <h1>DUNGEONCOM</h1>
+                    <ul>
+                        <li onmouseover="changeBackground('hover')" onmouseleave="changeBackground('leave')"><a
+                                href="">Landing Page</a>
+                        </li>
+                        <li onmouseover="changeBackground('hover')" onmouseleave="changeBackground('leave')"><a
+                                href="">Landing Page</a>
+                        </li>
+                        <li onmouseover="changeBackground('hover')" onmouseleave="changeBackground('leave')"><a
+                                href="">Landing Page</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dungeon ul2">
+                    <h1>DUNGEONART</h1>
+                    <ul>
+                        <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
+                                href="">Landing Page</a>
+                        </li>
+                        <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
+                                href="">Landing Page</a>
+                        </li>
+                        <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
+                                href="">Landing Page</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function changeBackground(action) {
+            var ul1 = document.querySelector('.dungeon.ul1');
+
+            if (action === 'hover') {
+                ul1.style.backgroundImage = "url('images/portal-dungeon.gif')";
+            } else if (action === 'leave') {
+                ul1.style.backgroundImage = "none";
+            }
+        }
+
+        function changeBackground2(action) {
+            var ul2 = document.querySelector('.dungeon.ul2');
+
+            if (action === 'hover') {
+                ul2.style.backgroundImage = "url('images/portal-dungeon.gif')";
+            } else if (action === 'leave') {
+                ul2.style.backgroundImage = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
