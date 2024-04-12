@@ -6,7 +6,7 @@
 
     --pro: "Tac One", sans-serif;
     --sub: "Dosis", sans-serif;
-    --txt: "Ubuntu Mono", monospace;
+    --txt: monospace;
 }
 
 body {
@@ -231,14 +231,14 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 2%;
 }
 .col-about {
     width: 100%;
-    height: 60vh;
+    height: 75vh;
 }
 .about {
     height: 100%;
+    padding: 0 10%;
     background-color: var(--ijo);
     border-radius: 5px;
     display: flex;
@@ -254,15 +254,12 @@ p {
     color: var(--black);
     font-size: 2rem;
 }
-.about h3 {
+.about p {
+    font-weight: 100;
     color: var(--black);
-    text-align: center;
-    font-size: 1rem;
 }
 
 .group-about {
-    padding: 0 2%;
-    margin-top: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -270,9 +267,8 @@ p {
 }
 .group-about p {
     width: 70%;
-    font-weight: 100;
-    color: var(--black);
-    margin-bottom: 2.5%;
+    margin-bottom: 7%;
+
 }
 .group-about a {
     width: 100px;
@@ -300,7 +296,7 @@ p {
 
 .dungeon {
     width: 100%;
-    height: 30vh;
+    height: 35.2vh;
     color: var(--black);
     background-color: var(--crem);
     border-radius: 5px;
@@ -316,7 +312,7 @@ p {
     font-family: var(--sub);
     font-weight: 100;
     font-size: 1.5rem;
-    color: var(--black);
+    color: var(--pink);
 }
 .dungeon ul {
     margin: 0;
@@ -327,19 +323,22 @@ p {
 }
 .dungeon li {
     width: 100%;
-    padding-bottom: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5%;
 }
 .dungeon li a {
+    width: 100%;
+    height: 3.5rem;
+    text-align: center;
     font-family: var(--pro);
-    font-size: 2.3rem;
-    color: var(--pink);
+    font-size: 1.7rem;
+    line-height: 190%;
 }
-.dungeon li:hover {
+.dungeon li:hover a {
     background-color: var(--black);
+    color: var(--crem);
 }
 
 
