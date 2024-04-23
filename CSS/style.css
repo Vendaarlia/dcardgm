@@ -7,6 +7,11 @@
     --pro: "Tac One", sans-serif;
     --sub: "Dosis", sans-serif;
     --txt: monospace;
+
+    --clamp-big: clamp(4.5rem, 15vw, 12rem);
+    --clamp-med: clamp(2.7rem, 5vw, 4rem);
+    --clamp-txt: clamp(0.7rem, 1vw, 1.8rem);
+    --clamp-btn: clamp(1rem, 5vw, 2rem);
 }
 
 body {
@@ -16,6 +21,7 @@ body {
 }
 
 a {
+    font-size: var(--clamp-txt);
     font-family: var(--txt);
     color: var(--pink);
     text-decoration: none;
@@ -24,17 +30,21 @@ a {
 h1, h2 {
     margin: 0;
     font-family: var(--pro);
+    font-size: var(--clamp-big);
+    line-height: 65%;
+    text-align: center;
 }
 
 h3 {
     margin: 0;
+    font-size: var(--clamp-med);
     font-family: var(--sub);
     font-weight: 100;
 }
 
 p {
     margin: 0;
-    font-size: small;
+    font-size: var(--clamp-txt);
     font-family: var(--txt);
 }
 
@@ -80,15 +90,11 @@ p {
 }
 
 /* hero */
+
 .up-hero {
     width: 100%;
-    background: url("images/portal-dungeon.gif");
-    background-size: 200%;
-    background-position: right top;
-    background-repeat: no-repeat;
 }
 .txt-1 h1 {
-    font-size: 4.7rem;
     text-align: center;
     line-height: 65%;
     color: var(--ijo);
@@ -111,7 +117,7 @@ p {
     -o-transform: rotateZ(20deg);
 }
 .txt-2 h3 {
-    font-size: 1rem;
+    font-size: clamp(1rem, 5vw, 3rem);
     text-align: center;
     margin: 0;
     margin-top: -5%;
@@ -126,10 +132,11 @@ p {
     align-items: center;
 }
 .btn-cta {
-    width: 35vw;
+    width: 40vw;
     height: 30px;
+    font-size: var(--clamp-btn);
     font-family: var(--sub);
-    font-weight: 900;
+    font-weight: 100;
     text-align: end;
     padding-right: 10%;
     margin-left: -25%;
@@ -141,30 +148,47 @@ p {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.btn-cta:hover {
+    background-color: var(--pink);
+}
 .p-cta {
+    font-size: clamp(0.7rem, 2vw, 2rem);
     width: 70vw;
     margin: 0;
 }
 
 /* anggota */
-.anggota {
-    margin-top: 0;
-}
 .txt-perwira {
-    font-size: 3rem;
-    text-align: center;
     color: var(--ijo);
-    margin: 5% auto;
+    margin-bottom: 2%;
 }
-.list-fame{
-    width: 95vw;
-    height: 50vw;
+.perwira-guild {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.4rem;
 }
-.hall-0f-fame {
+.exsekutif {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.4rem;
+}
+.grup-exsekutif {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.4rem;
+}
+.list-exsekutif {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: var(--pink);
+    padding: 2% 0;
     background-color: var(--crem);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -172,16 +196,48 @@ p {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.hall-0f-fame h1 {
+.hall-0f-fame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--crem);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.hall-0f-fame h3 {
     color: var(--pink);
-    font-size: 3rem;
+    font-size: clamp(2.7rem, 5vw, 10rem);
+    font-weight: 100;
     text-align: center;
-    margin-top: 3.5%;
 }
 
+
+@media only screen and (min-width: 361px) {
+    #guild {
+        margin: auto 10%;
+    }
+    .perwira-guild {
+        flex-direction: row;
+    }
+    .txt-1 img {
+        top: 25%;
+        left: 70%;
+    }
+    .btn-cta {
+        height: 60px;
+    }
+}
+
+
+/*
 .exsekutif {
     width: 100%;
-    height: 15vh;
+    height: clamp(15vh, 30vh, 100vh);
     margin: 5% 0;
     display: flex;
     justify-content: space-between;
@@ -200,7 +256,7 @@ p {
     width: 100%;
     height: 100%;
     color: var(--pink);
-    font-weight: 600;
+    font-weight: 700;
     background-color: var(--crem);
     border-radius: 5px;
     display: flex;
@@ -212,17 +268,21 @@ p {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.list-exsekutif a {
+    font-weight: 100;
+}
 .list-exsekutif .big {
     font-size: 1.4rem;
 }
+*/
 
 /* DCARDGM */
+/*
 .dcardgm {
     width: 100%;
 }
 .dcardgm h1 {
     color: var(--pink);
-    font-size: 3rem;
     text-align: center;
     margin-top: 3.5%;
 }
@@ -234,7 +294,6 @@ p {
 }
 .col-about {
     width: 100%;
-    height: 75vh;
 }
 .about {
     height: 100%;
@@ -252,11 +311,14 @@ p {
 }
 .about h1 {
     color: var(--black);
-    font-size: 2rem;
+    font-size: var(--clamp-med);
+    margin-bottom: 2%;
 }
 .about p {
     font-weight: 100;
     color: var(--black);
+    margin-bottom: 2%;
+
 }
 
 .group-about {
@@ -264,20 +326,21 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 2%;
+    margin: 2% 0;
 }
 .group-about p {
+    font-weight: 600;
     width: 70%;
-    margin-bottom: 7%;
 
 }
 .group-about a {
     width: 100px;
     height: 100px;
-    margin-bottom: 2.5%;
+    font-size: var(--clamp-btn);
     font-family: var(--sub);
-    font-weight: 900;
+    font-weight: 100;
     text-align: center;
-    color: var(--crem);
+    color: var(--black);
     background-color: var(--pink);
     display: flex;
     justify-content: center;
@@ -344,3 +407,5 @@ p {
 
 
 
+
+*/
