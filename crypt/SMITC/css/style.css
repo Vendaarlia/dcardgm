@@ -1,0 +1,226 @@
+/* navbar */
+.nav__item {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+}
+
+.nav__item {
+    --primary-color: #111;
+    --hovered-color: linear-gradient(90deg, #15A0EDff, #A762BEff);
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav__item a {
+    margin: 0;
+    position: relative;
+}
+
+.nav__item::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: var(--hovered-color);
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.nav__item a::before {
+    position: absolute;
+
+    /* box-sizing: border-box; */
+    width: 0%;
+    inset: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+
+.nav__item:hover::after {
+    width: 100%;
+}
+
+.nav__item:hover a::before {
+    width: 100%;
+}
+
+/* button all */
+button {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    z-index: 1;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+button:hover::before {
+    filter: blur(20px);
+}
+
+button:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+}
+
+@media (max-width:940px) {
+    .brand {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:940px) {
+    button {
+        font-size: 1rem;
+    }
+}
+
+pwhite {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+@media (max-width:940px) {
+    p {
+        font-size: 0.8rem;
+        word-break: break-word;
+    }
+}
+
+.slogan1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 118px;
+    padding-top: 0px;
+    margin-top: -17px;
+}
+
+@media (max-width:940px) {
+    .slogan1 {
+        font-size: 7rem;
+    }
+}
+
+.slogan2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10rem;
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 15px;
+    margin-bottom: 0;
+}
+
+@media (max-width:940px) {
+    .slogan2 {
+        font-size: 7rem;
+        word-break: break-word;
+    }
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+    align-items: center;
+    margin-bottom: 5%;
+    padding-bottom: 2.5%;
+}
+
+@media (max-width:940px) {
+    .row2 {
+        margin-bottom: 35px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+.imgprofil {
+    background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-position: left top;
+    background-size: cover;
+    height: 100vh;
+    border-radius: 55px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width:940px) {
+    .imgprofil {
+        background-position: center top;
+    }
+}
+
+.pportofolio {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 60vw;
+    color: #000;
+}
+
+.pwhite {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+@media (max-width:940px) {
+    .pwhite {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:940px) {
+    .pconncet {
+        visibility: hidden;
+    }
+}

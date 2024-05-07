@@ -15,6 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
+    <!--MAIN JS-->
+    <script src="/js/p5.js"></script>
+    <script src="/js/matter.js"></script>
+    <script src="/js/main.js"></script>
+
+
 
 </head>
 
@@ -52,11 +58,10 @@
     </section>
 
     <section class="anggota" id="guild">
-        <h1 class="txt-perwira">HALL OF FAME</h1>
         <div class="perwira-guild">
             <div class="exsekutif">
                 <div class="hall-0f-fame">
-                    <h3>LIST OF ADVENTURER THAT CONTRIBUTE</h3>
+                    <h1>LIST OF ADVENTURER THAT CONTRIBUTE</h1>
                 </div>
             </div>
             <div class="exsekutif">
@@ -65,7 +70,7 @@
                         <a href="http://.dcardgm.com">REDANTONI</a>
                         <p>Status</p>
                     </div>
-                    <div class="list-exsekutif pink">
+                    <div class="list-exsekutif pinkz">
                         <a href="http://.dcardgm.com">BLUEVILS</a>
                         <p>Status</p>
                     </div>
@@ -75,7 +80,7 @@
                     </div>
                 </div>
                 <div class="grup-exsekutif">
-                    <div class="list-exsekutif pink">
+                    <div class="list-exsekutif pinkz">
                         <a class="big" href="http://.dcardgm.com">VENDAARLIA</a>
                         <p>Status</p>
                     </div>
@@ -94,10 +99,6 @@
                         <br>
                         <br>
                     Imagine yourself as a fearless adventurer, venturing into the depths of the digital dungeon to conquer new horizons and claim your rightful place among the elite. In Dungeon Guild, we provide you with the tools and resources you need to embark on your epic journey of online marketing conquest.</p>
-                    <div class="group-about">
-                        <p>Join Now and unlock a world of possibilities in the ever-expanding realm of the internet. With our Mythic Developer teams, the only limit is your imagination!</p>
-                        <a href="http://">Joint Now</a>
-                    </div>
                 </div>
             </div>
             <div class="col-about">
@@ -119,7 +120,7 @@
                     <h1>The Guild Advantage</h1>
                     <ul>
                         <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
-                                href="">Subdomains for Member</a>
+                                href="">Free Domaint</a>
                         </li>
                         <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
                                 href="">Ready for SEO</a>
@@ -130,33 +131,119 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="promise">
-            
+            <div class="col-about">
+                <div class="dungeon-ads">
+                    <h1>Customized Adventure</h1>
+                    <p>Dive into a world of personalized experiences with our custom-designed websites tailored to your unique needs and preferences. Just like a seasoned adventurer customizes their gear for every quest, our expert designers craft websites that reflect your brand identity and vision, ensuring a one-of-a-kind online presence.</p>
+                </div>
+                <div class="dungeon-ads">
+                    <img src="/images/portal-dungeon.gif" alt="" srcset="">
+                </div>
+            </div>
+            <div class="col-about rev">
+                <div class="dungeon-ads">
+                    <img src="/images/portal-dungeon.gif" alt="" srcset="">
+                </div>
+                <div class="dungeon-ads">
+                    <h1>Guild of Artisans</h1>
+                    <p>Join our guild of skilled artisans who specialize in crafting digital masterpieces. Our team of designers, developers, and creatives work together like a well-coordinated party, combining their expertise to bring your digital dreams to life. With their mastery of design and penchant for innovation, they'll transform your ideas into stunning visual experiences that captivate and engage your audience.</p>
+                </div>
+            </div>
+            <div class="col-about">
+                <div class="dungeon-ads">
+                    <h1>Unleash Your Creative Essence</h1>
+                    <p>Experience the freedom of character creation in an MMORPG game as we bestow upon you the power to shape your digital identity with unparalleled visual aesthetics. Your online presence shall stand as a testament to your individuality and style.</p>
+                </div>
+                <div class="dungeon-ads">
+                    <img src="/images/portal-dungeon.gif" alt="" srcset="">
+                </div>
+            </div>
+            <div class="col-about rev">
+                <div class="dungeon-ads">
+                    <img src="/images/portal-dungeon.gif" alt="" srcset="">
+                </div>
+                <div class="dungeon-ads">
+                    <h1>Free Inventory and Subdomain</h1>
+                    <p>As a boon to newcomers stepping into the realm of web design, we offer complimentary hosting and a subdomain for your inaugural quest. Begin your digital odyssey without the burden of technical intricacies, and let your creativity flow unhindered.</p>
+                </div>
+            </div>
+            <div class="col-about">
+                <div class="group-about">
+                    <p>Join us on this epic journey of web design customization, where each project is a new chapter in the saga of your online presence. Together, we shall conquer challenges, unveil hidden potentials, and craft digital legacies that endure the test of time.</p>
+                    <a href="http://">Joint Now</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script>
-        function changeBackground(action) {
-            var ul1 = document.querySelector('.dungeon.ul1');
+    <section class="price-tag">
+        <div class="tit-price">
+            <h1>We've Got a Price</h1>
+            <h3>That's Perfect for you</h3>
+        </div>
+        <div class="wrap-price">
+            <div class="card-price">
+                <div class="tit-pack">
+                    <h1>Landing Page</h1>
+                </div>
+                <div class="price-pack">
+                    <h3>1.220.000 IDR</h3>
+                    <button type="submit">Order Now</button>
+                </div>
+                <div class="feat">
+                    <div class="main-feat mainFeat"></div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="tit-pack">
+                    <h1>Online Page</h1>
+                </div>
+                <div class="price-pack">
+                    <h3>1.620.000 IDR</h3>
+                    <button type="submit">Order Now</button>
+                </div>
+                <div class="feat">
+                    <div class="online-feat onlineFeat"></div>
+                    <div class="main-feat mainFeat"></div>
+                </div>
+            </div>
+            <div class="card-price">
+                <div class="tit-pack">
+                    <h1>Website Online</h1>
+                </div>
+                <div class="price-pack">
+                    <h3>3.720.000 IDR</h3>
+                    <button type="submit">Order Now</button>
+                </div>
+                <div class="feat">
+                    <div class="website-feat websiteFeat"></div>
+                    <div class="online-feat onlineFeat"></div>
+                    <div class="main-feat mainFeat"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <canvas id="canvas"></canvas>
+    <section class="footer">
+        <div class="wrap-txt">
+            <div class="area-txt">
+                <div class="txt-footer">
+                    <h1>CLAIM YOUR FREE SUBDOMAIN NOW</h1>
+                    <p>its limited for 100 member. claim secepatnya sebelum tak kebagian</p>
+                </div>
+                <button>CLAIM NOW</button>
+            </div>
+        </div>
+        <div class="wrap-marquee">
+            <div class="mark-up">
+                <marquee direction="left" behavior="alternate">DUNGEON<span>CARD GUILD</span>MASTER</marquee>
+                <marquee direction="right" behavior="alternate">DUNGEON<span>CARD GUILD</span>MASTER</marquee>
+            </div>
+        </div>
+    </section>
 
-            if (action === 'hover') {
-                ul1.style.backgroundImage = "url('images/portal-dungeon.gif')";
-            } else if (action === 'leave') {
-                ul1.style.backgroundImage = "none";
-            }
-        }
-
-        function changeBackground2(action) {
-            var ul2 = document.querySelector('.dungeon.ul2');
-
-            if (action === 'hover') {
-                ul2.style.backgroundImage = "url('images/portal-dungeon.gif')";
-            } else if (action === 'leave') {
-                ul2.style.backgroundImage = "none";
-            }
-        }
-    </script>
+    <script src="js/templat.js"></script>
 </body>
 
 </html>

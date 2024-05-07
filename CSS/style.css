@@ -9,7 +9,8 @@
     --txt: monospace;
 
     --clamp-big: clamp(4.5rem, 15vw, 12rem);
-    --clamp-med: clamp(2.7rem, 5vw, 4rem);
+    --clamp-med: clamp(4rem, 10vw, 8rem);
+    --clamp-sub: clamp(2.7rem, 5vw, 6rem);
     --clamp-txt: clamp(0.7rem, 1vw, 1.8rem);
     --clamp-btn: clamp(1rem, 5vw, 2rem);
 }
@@ -18,6 +19,8 @@ body {
     background-color: var(--black);
     color: var(--crem);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -30,7 +33,7 @@ a {
 h1, h2 {
     margin: 0;
     font-family: var(--pro);
-    font-size: var(--clamp-big);
+    font-size: var(--clamp-med);
     line-height: 65%;
     text-align: center;
 }
@@ -90,12 +93,12 @@ p {
 }
 
 /* hero */
-
 .up-hero {
     width: 100%;
 }
 .txt-1 h1 {
     text-align: center;
+    font-size: var(--clamp-big);
     line-height: 65%;
     color: var(--ijo);
     margin: 5% auto;
@@ -125,8 +128,8 @@ p {
 
 .sub-hero {
     width: 100%;
-    height: 20vh;
-    margin-top: 5%;
+    height: 10vh;
+    margin: 5% 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,9 +161,8 @@ p {
 }
 
 /* anggota */
-.txt-perwira {
-    color: var(--ijo);
-    margin-bottom: 2%;
+.anggota {
+    margin: 10% 0;
 }
 .perwira-guild {
     display: flex;
@@ -186,15 +188,32 @@ p {
 .list-exsekutif {
     width: 100%;
     height: 100%;
-    text-align: center;
-    color: var(--pink);
     padding: 2% 0;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
     background-color: var(--crem);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+.list-exsekutif.pinkz {
+    background-color: var(--pink);
+    color: var(--crem);
+}
+.list-exsekutif p {
+    font-weight: 100;
+}
+.list-exsekutif a {
+    font-size: clamp(0.7rem, 2vw, 2rem);
+}
+.list-exsekutif.pinkz a {
+    color: var(--crem);
 }
 .hall-0f-fame {
     width: 100%;
@@ -209,95 +228,25 @@ p {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.hall-0f-fame h3 {
+.hall-0f-fame h1 {
     color: var(--pink);
-    font-size: clamp(2.7rem, 5vw, 10rem);
+    font-size: clamp(4rem, 7vw, 10rem);
     font-weight: 100;
     text-align: center;
 }
 
-
-@media only screen and (min-width: 361px) {
-    #guild {
-        margin: auto 10%;
-    }
-    .perwira-guild {
-        flex-direction: row;
-    }
-    .txt-1 img {
-        top: 25%;
-        left: 70%;
-    }
-    .btn-cta {
-        height: 60px;
-    }
-}
-
-
-/*
-.exsekutif {
-    width: 100%;
-    height: clamp(15vh, 30vh, 100vh);
-    margin: 5% 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2%;
-}
-.grup-exsekutif {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 10%;
-}
-.list-exsekutif {
-    width: 100%;
-    height: 100%;
-    color: var(--pink);
-    font-weight: 700;
-    background-color: var(--crem);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-.list-exsekutif a {
-    font-weight: 100;
-}
-.list-exsekutif .big {
-    font-size: 1.4rem;
-}
-*/
-
 /* DCARDGM */
-/*
-.dcardgm {
-    width: 100%;
-}
 .dcardgm h1 {
     color: var(--pink);
     text-align: center;
     margin-top: 3.5%;
+    line-height: 65%;
 }
-.wrap-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.col-about {
-    width: 100%;
-}
+
 .about {
     height: 100%;
     padding: 0 10%;
+    margin-top: 5%;
     background-color: var(--ijo);
     border-radius: 5px;
     display: flex;
@@ -311,22 +260,25 @@ p {
 }
 .about h1 {
     color: var(--black);
-    font-size: var(--clamp-med);
+    font-size: var(--clamp-sub);
     margin-bottom: 2%;
 }
 .about p {
     font-weight: 100;
     color: var(--black);
     margin-bottom: 2%;
-
 }
-
 .group-about {
+    width: 100%;
+    height: 35.2vh;
+    padding: 0 5%;
+    color: var(--black);
+    background-color: var(--ijo);
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2%;
-    margin: 2% 0;
+    gap: 5%;
 }
 .group-about p {
     font-weight: 600;
@@ -334,8 +286,7 @@ p {
 
 }
 .group-about a {
-    width: 100px;
-    height: 100px;
+    padding: 20px;
     font-size: var(--clamp-btn);
     font-family: var(--sub);
     font-weight: 100;
@@ -357,6 +308,18 @@ p {
     color: var(--pink);
 }
 
+.col-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.col-about.rev {
+    flex-direction: column-reverse;
+}
+
 .dungeon {
     width: 100%;
     height: 35.2vh;
@@ -375,6 +338,7 @@ p {
     font-family: var(--sub);
     font-weight: 100;
     font-size: 1.5rem;
+    line-height: 90%;
     color: var(--pink);
 }
 .dungeon ul {
@@ -403,9 +367,238 @@ p {
     background-color: var(--black);
     color: var(--crem);
 }
+.dungeon-ads {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    overflow: hidden;
+    width: 100%;
+    height: 35.2vh;
+    color: var(--black);
+    background-color: var(--crem);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.dungeon-ads h1 {
+    text-align: left;
+    font-size: var(--clamp-sub);
+    margin: 0 5%;
+}
+.dungeon-ads p {
+    margin: 0 5%;
+}
+.dungeon-ads img {
+    height: 100%;
+}
+
+
+/* PRICE TAG */
+.price-tag {
+    margin: 10% auto;
+}
+.tit-price h1, h3 {
+    color: var(--ijo);
+}
+.tit-price h3 {
+    font-size: var(--clamp-sub);
+    text-align: center;
+}
+.wrap-price {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+.card-price {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 5%;
+    border: 1px solid var(--crem);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tit-pack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.tit-pack h1 {
+    text-align: start;
+    font-size: var(--clamp-sub);
+}
+
+.price-pack h3 {
+    font-size: clamp(2.5rem, 2vw, 3rem);
+    font-weight: 100;
+}
+.price-pack button {
+    width: 100%;
+    padding: 5px;
+    font-size: var(--clamp-btn);
+    font-family: var(--sub);
+    font-weight: 100;
+    background-color: var(--ijo);
+    border: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.price-pack button:hover {
+    background-color: var(--pink);
+}
+
+.feat .line-feat {
+    width: 100%;
+    height: 3px;
+    background-color: var(--ijo);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.feat ul {
+    list-style: square;
+    padding: 0;
+}
+.feat ul li {
+    font-family: var(--txt);
+    font-size: var(--clamp-txt);
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    position: absolute;
+}
+canvas {
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+.wrap-txt {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.area-txt {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.area-txt button {
+    margin-top: .4rem;
+    padding: 20px;
+    font-size: var(--clamp-btn);
+    font-family: var(--sub);
+    font-weight: 100;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--crem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.area-txt button:hover {
+    background-color: var(--pink);
+    color: var(--crem);
+}
+
+.txt-footer {
+    margin-top: 10%;
+    text-align: center;
+    color: var(--ijo);
+}
+.txt-footer p {
+    margin-top: .4rem;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: var(--sub);
+}
+
+.wrap-marquee marquee {
+    text-align: center;
+    font-family: var(--pro);
+    font-size: var(--clamp-big);
+    line-height: 65%;
+    color: var(--ijo);
+}
+.wrap-marquee marquee span {
+    color: var(--pink);
+}
 
 
 
 
 
-*/
+
+
+
+
+@media only screen and (min-width: 361px) {
+    #guild {
+        margin: 10%;
+    }
+    .perwira-guild {
+        flex-direction: row;
+    }
+    .txt-1 img {
+        top: 25%;
+        left: 70%;
+    }
+    .btn-cta {
+        height: 60px;
+    }
+
+    .dungeon-ads img {
+        width: 100%;
+    }
+
+    .dcardgm {
+        margin: 0 10%;
+    }
+    .col-about {
+        flex-direction: row;
+    }
+    .col-about.rev {
+        flex-direction: row;
+    }
+    .area-txt {
+        margin: 0 10%;
+    }
+    .price-tag {
+        margin: 10%;
+
+    }
+    .wrap-price {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
