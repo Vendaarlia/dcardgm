@@ -48,5 +48,6 @@ Our pricing packages are designed to fit your unique needs:
 
 Ready to embark on your online marketing adventure? Click the button below to get started!
 
-[CLAIM NOW](dcardgm.com)
+[CLAIM NOW](https://dcardgm.com/)
+
 Thank you for visiting our website! We look forward to working with you on your online marketing journey.
