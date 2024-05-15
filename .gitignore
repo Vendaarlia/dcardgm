@@ -1,0 +1,4 @@
+# Ignore operating system-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
