@@ -15,9 +15,9 @@ const onlineFeat = `
     <li>Free Hosting</li>
     <li>Free 500.000kb Storage</li>
     <li>Free Subdomain</li>
-    <li>Speed Optimalis</li>
-    <li>Lifetime Support</li>
     <li>Integration Chat WA or Telegram</li>
+    <li>Speed Optimalis</li>
+    <li>Lifetime Maintenance</li>
     <li>I Will Handle Deployment</li>
 </ul>
     <div class="line-feat"></div>
@@ -25,13 +25,12 @@ const onlineFeat = `
 
 const mainFeat = `
 <ul>
-    <li>Free Hosting</li>
-    <li>Free 500.000kb Storage</li>
-    <li>Free Subdomain</li>
-    <li>Speed Optimalis</li>
-    <li>Lifetime Support</li>
-    <li>Integration Chat WA or Telegram</li>
-    <li>I Will Handle Deployment</li>
+    <li>Custom Landing Page</li>
+    <li>Not a Templates OR CMS</li>
+    <li>Crafted for Your Personal Branding</li>
+    <li>Responsive Design</li>
+    <li>Conversion Design</li>
+    <li>Ongoing Support</li>
 </ul>
     <div class="line-feat"></div>
 `;
