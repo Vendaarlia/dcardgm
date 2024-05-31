@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Multi-Step Form</h1>
+    <form id="myForm" action="submit.php" method="post" enctype="multipart/form-data">
+        <!-- Step 1 -->
+        <h2>Step 1: Introduce Yourself</h2>
+        <label for="name">Siapakah nama anda?</label>
+        <input type="text" id="name" name="name" required>
+        <button type="button" id="next1">Next</button>
+        <input type="hidden" name="step" value="1">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
