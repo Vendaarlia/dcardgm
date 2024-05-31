@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* CSS NYA ANGGOTA SECTION */
+.anggota {
+    margin: 10% 0;
+}
+.perwira-guild {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.exsekutif {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.4rem;
+}
+.grup-exsekutif {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.4rem;
+}
+.list-exsekutif {
+    width: 100%;
+    height: 100%;
+    padding: 2% 0;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
+    background-color: var(--crem);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.list-exsekutif.pinkz {
+    background-color: var(--pink);
+    color: var(--crem);
+}
+.list-exsekutif p {
+    font-weight: 100;
+}
+.list-exsekutif a {
+    font-size: clamp(0.7rem, 2vw, 2rem);
+}
+.list-exsekutif.pinkz a {
+    color: var(--crem);
+}
+.hall-0f-fame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--crem);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.hall-0f-fame h1 {
+    color: var(--pink);
+    font-size: clamp(4rem, 7vw, 10rem);
+    font-weight: 100;
+    text-align: center;
+}
+
+/*UL INTERAKTIVE CSS*/
+.col-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.col-about.rev {
+    flex-direction: column-reverse;
+}
+.dungeon {
+    width: 100%;
+    height: 35.2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    background-color: var(--crem);
+    border-radius: 5px;
+    background-image: none;
+    background-size: cover;
+    background-position: bottom;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.dungeon h1 {
+    font-family: var(--sub);
+    font-weight: 100;
+    font-size: 1.5rem;
+    line-height: 90%;
+    color: var(--pink);
+}
+.dungeon ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.8rem;
+    list-style: none;
+    overflow: hidden;
+}
+.dungeon li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+.dungeon li a {
+    width: 100%;
+    height: 3.5rem;
+    text-align: center;
+    font-family: var(--pro);
+    font-size: 1.7rem;
+    line-height: 190%;
+}
+.dungeon li:hover a {
+    background-color: var(--black);
+    color: var(--crem);
+}
+
+    </style>
+</head>
+<body>
+    <h1>templat yang tidak di gunakan</h1>
+
+    <!--ANGGOTA-->
+    <section class="anggota" id="guild">
+        <div class="perwira-guild">
+            <div class="exsekutif">
+                <div class="hall-0f-fame">
+                    <h1>LIST OF ADVENTURER THAT CONTRIBUTE</h1>
+                </div>
+            </div>
+            <div class="exsekutif">
+                <div class="grup-exsekutif">
+                    <div class="list-exsekutif">
+                        <a href="http://.dcardgm.com">REDANTONI</a>
+                        <p>Status</p>
+                    </div>
+                    <div class="list-exsekutif pinkz">
+                        <a href="http://.dcardgm.com">BLUEVILS</a>
+                        <p>Status</p>
+                    </div>
+                    <div class="list-exsekutif">
+                        <a href="http://.dcardgm.com">MOHAZART</a>
+                        <p>Status</p>
+                    </div>
+                </div>
+                <div class="grup-exsekutif">
+                    <div class="list-exsekutif pinkz">
+                        <a class="big" href="http://.dcardgm.com">VENDAARLIA</a>
+                        <p>Status</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ul interaktive">
+        <div class="col-about">
+            <div class="dungeon ul1" id="service">
+                <h1>What We Offer</h1>
+                <ul>
+                    <li onmouseover="changeBackground('hover')" onmouseleave="changeBackground('leave')"><a
+                            href="">Mythic Web Development</a>
+                    </li>
+                    <li onmouseover="changeBackground('hover')" onmouseleave="changeBackground('leave')"><a
+                            href="">Epic Digital Invitations</a>
+                    </li>
+                    <li onmouseover="changeBackground('hover')" onmouseleave="changeBackground('leave')"><a
+                            href="">Portal Linking Mastery</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dungeon ul2">
+                <h1>The Guild Advantage</h1>
+                <ul>
+                    <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
+                            href="">Free Domaint</a>
+                    </li>
+                    <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
+                            href="">Ready for SEO</a>
+                    </li>
+                    <li onmouseover="changeBackground2('hover')" onmouseleave="changeBackground2('leave')"><a
+                            href="">Budget-Friendly Solutions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<script>
+    /** effect hover dungeon ul1 */
+function changeBackground(action) {
+    var ul1 = document.querySelector('.dungeon.ul1');
+
+    if (action === 'hover') {
+        ul1.style.backgroundImage = "url('images/portal-dungeon.gif')";
+    } else if (action === 'leave') {
+        ul1.style.backgroundImage = "none";
+    }
+}
+
+function changeBackground2(action) {
+    var ul2 = document.querySelector('.dungeon.ul2');
+
+    if (action === 'hover') {
+        ul2.style.backgroundImage = "url('images/portal-dungeon.gif')";
+    } else if (action === 'leave') {
+        ul2.style.backgroundImage = "none";
+    }
+}
+</script>
+</body>
+</html>
