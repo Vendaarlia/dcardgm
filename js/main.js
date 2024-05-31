@@ -1,23 +1,3 @@
-/** effect hover dungeon ul1 */
-function changeBackground(action) {
-    var ul1 = document.querySelector('.dungeon.ul1');
-
-    if (action === 'hover') {
-        ul1.style.backgroundImage = "url('images/portal-dungeon.gif')";
-    } else if (action === 'leave') {
-        ul1.style.backgroundImage = "none";
-    }
-}
-
-function changeBackground2(action) {
-    var ul2 = document.querySelector('.dungeon.ul2');
-
-    if (action === 'hover') {
-        ul2.style.backgroundImage = "url('images/portal-dungeon.gif')";
-    } else if (action === 'leave') {
-        ul2.style.backgroundImage = "none";
-    }
-}
 
 /** grafity text */
         let piliFont;
@@ -106,12 +86,12 @@ function changeBackground2(action) {
                 rectMode(CENTER);
                 fill("#c9d1f5");
                 stroke(this.color);
-                strokeWeight(3);
-                rect(0, 0, this.kata.length * 40 + 80, 100, 60);
+                strokeWeight(2);
+                rect(0, 0, this.kata.length * 20 + 40, 50, 30);
                 noStroke();
                 textFont(piliFont);
                 fill(this.color);
-                textSize(40);
+                textSize(20);
                 textAlign(CENTER, CENTER);
                 text(this.kata.toUpperCase(), 0, 0); // Corrected from Text to text
                 pop();
