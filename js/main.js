@@ -86,12 +86,12 @@
                 rectMode(CENTER);
                 fill("#c9d1f5");
                 stroke(this.color);
-                strokeWeight(2);
-                rect(0, 0, this.kata.length * 20 + 40, 50, 30);
+                strokeWeight(3);
+                rect(0, 0, this.kata.length * 40 + 80, 100, 60);
                 noStroke();
                 textFont(piliFont);
                 fill(this.color);
-                textSize(20);
+                textSize(40);
                 textAlign(CENTER, CENTER);
                 text(this.kata.toUpperCase(), 0, 0); // Corrected from Text to text
                 pop();
