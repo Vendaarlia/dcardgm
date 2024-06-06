@@ -13,10 +13,10 @@ export const work = [
 
     },
     {
-        title: "Digital Delivered",
-        description: "Digital Delivered is a renowned studio known for its excellence in frontend and backend development, along with expertise in crafting effective marketing strategies. Our team comprises highly skilled professionals who have been recognized for their contributions to the developer community.",
-        link: "https://github.com/Vendaarlia/digital-delivered",
-        image: "images/logo.jpg",
+        title: "SANTAMONIC STUDIO",
+        description: "SANTAMONIC-STUDIO was founded on the principles of creativity, innovation, and collaboration. Our team is passionate about Branding, Product Design and is committed to delivering high-quality Branding and Product strategies that meet the highest standards.",
+        link: "./crypt/SANTAMONIC-STUDIO/index.html",
+        image: "images/works/santamonic.png",
 
     }
 ]

@@ -96,6 +96,7 @@ a {
     padding: 2rem;
     aspect-ratio: 3 / 2;
     background-position: 50%;
+    background-position: center center;
     background-size: cover;
     flex-direction: column;
     flex: 1 0 auto;
