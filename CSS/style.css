@@ -5,13 +5,15 @@
     --crem: #c9d1f5;
 
     --pro: "Tac One", sans-serif;
-    --txt: monospace;
+    --txt: "Roboto", sans-serif;
+    --cad: monospace;
+
 
     --clamp-big: clamp(3rem, 15vw, 12rem);
     --clamp-med: clamp(4rem, 10vw, 8rem);
     --clamp-sub: clamp(2.7rem, 5vw, 6rem);
-    --clamp-txt: clamp(0.7rem, 2vw, 1.1rem);
-    --clamp-btn: clamp(1rem, 2.5vw, 1.7rem);
+    --clamp-txt: clamp(0.7rem, 1.2vw, 1rem);
+    --clamp-btn: clamp(0.8rem, 2.2vw, 1.3rem);
 }
 
 body {
@@ -48,6 +50,7 @@ h3 {
 
 p {
     margin: 0;
+    line-height: 120%;
     font-size: var(--clamp-txt);
     font-family: var(--txt);
 }
@@ -97,7 +100,6 @@ li {
 /* hero */
 .hero {
     width: 100vw;
-    height: 30vh;
     overflow-x: hidden;
 }
 .responsive {
@@ -376,26 +378,32 @@ canvas {
     font-size: clamp(1rem, 5vw, 2rem);
 }
 
+
 /* service.html */
 .row-service {
-    margin-top: 1rem;
+    height: fit-content;
+    margin-top: 20%;
     margin-bottom: 5rem;
     padding: 0 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
 }
 .col-service {
     width: 100%;
-    margin: .6rem;
+    height: 100%;
+    margin: .6rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .txt-service {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: .4rem;
 }
 .detile-service {
     padding: 1rem 5%;
@@ -412,38 +420,29 @@ canvas {
     align-items: center;
     flex-wrap: wrap;
     gap: .4rem;
+    color: var(--pink);
 }
 .detile-service ul li {
     list-style: none;
     margin-bottom: .4rem;
     font-size: var(--clamp-txt);
     padding: 5px 10px;
-    background-color: var(--ijo);
-    color: var(--black);
+    color: var(--pink);
+    border: 1px solid var(--pink);
     border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
 }
 .img-service {
     width: 100%;
-    height: 35vh;
+    height: 45vh;
     background-color: var(--ijo);
-    aspect-ratio: 2 / 2;
     background-position: 50%;
     background-size: contain;
-    flex-direction: column;
-    flex: 1 0 auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: relative;
     overflow: hidden;
+    border: 1px solid var(--crem);
     border-radius: 5px;
 }
 
-/* call action */
+/* call action service.html */
 .wrap-call {
     width: 100%;
     display: flex;
@@ -458,9 +457,8 @@ canvas {
 .area-call a {
     margin-top: .4rem;
     padding: 20px;
-    font-size: var(--clamp-btn);
-    font-weight: 100;
     text-align: center;
+    font-size: var(--clamp-btn);
     color: var(--black);
     background-color: var(--pink);
     display: flex;
@@ -491,9 +489,11 @@ canvas {
 
 
 
+
+
 @media only screen and (min-width: 768px) {
     .hero {
-        height: 90vh;
+        height: max-content;
     }
     .responsive {
         padding: 2% 0;
@@ -524,6 +524,9 @@ canvas {
         flex-direction: row-reverse;
     }
     .img-service {
-        height: 65vh;
+    height: 65vh;
+    }
+    .txt-service {
+        margin: 0 1rem;
     }
 }

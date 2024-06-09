@@ -224,10 +224,10 @@ class NavBar extends HTMLElement {
     ul.setAttribute("class", "nav__wrapper");
 
     const items = [
-      { href: "Portofolio.html", text: "About me" },
-      { href: "Experiment.html", text: "Resume" },
-      { href: "About.html", text: "Work" },
-      { href: "Contact.html", text: "Get in thouch!" },
+      { href: "#about", text: "About me" },
+      { href: "#resume", text: "Resume" },
+      { href: "#works", text: "Work" },
+      { href: "#contact", text: "Get in thouch!" },
     ];
 
     items.forEach((item) => {

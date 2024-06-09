@@ -5,13 +5,14 @@
     --crem: #c9d1f5;
 
     --pro: "Tac One", sans-serif;
-    --txt: monospace;
+    --txt: "Roboto", sans-serif;
+    --cad: monospace;
 
 
     --clamp-big: clamp(3rem, 15vw, 12rem);
     --clamp-med: clamp(4rem, 10vw, 8rem);
     --clamp-sub: clamp(2.7rem, 5vw, 6rem);
-    --clamp-txt: clamp(0.7rem, 2vw, 1.1rem);
+    --clamp-txt: clamp(0.7rem, 1.2vw, 1rem);
     --clamp-btn: clamp(0.8rem, 2.2vw, 1.3rem);
 }
 
@@ -70,65 +71,47 @@ a {
 
 /* worklist template */
 #worksList {
-    margin: 5% 10%;
+    margin-top: 10%;
+    padding: 0 5%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
 .wrap-work {
-    margin-bottom: 2rem;
-}
-.col-work {
-    color: var(--crem);
-    cursor: pointer;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    transition: filter .2s;
-    display: flex;
-    overflow: hidden;
-}
-.work-ads h3 {
-    margin: 1rem 0;
+    width: 90vw;
+    margin-bottom: 10%;
+
 }
 .img-work {
-    padding: 2rem;
-    aspect-ratio: 3 / 2;
+    width: 100%;
+    height: 45vh;
+    background-color: var(--ijo);
     background-position: 50%;
-    background-position: center center;
     background-size: cover;
-    flex-direction: column;
-    flex: 1 0 auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: relative;
     overflow: hidden;
     border: 1px solid var(--crem);
     border-radius: 5px;
 }
-.live-demo {
-    margin-top: 1rem;
+.work-ads h3, p, a {
+    margin: 5% 0;
+}
+.work-ads a {
+    margin-top: .4rem;
     padding: 20px;
-    font-size: var(--clamp-btn);
-    font-weight: 100;
     text-align: center;
+    font-size: var(--clamp-btn);
     color: var(--black);
-    background-color: var(--ijo);
+    background-color: var(--pink);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     border-radius: 5px;
 }
-.live-demo:hover {
-    background-color: var(--pink);
+.work-ads a:hover {
+    background-color: var(--ijo);
 }
-.icons-font {
-    width: 20%;
-}
-
 
 
 
@@ -143,13 +126,9 @@ a {
 @media only screen and (min-width: 768px) {
     #worksList {
         flex-direction: row;
-        flex-wrap: wrap;
     }
     .wrap-work {
-        width: 30%;
-    }
-    .img-work {
-        height: 40vh;
+        width: 40vw;
     }
 
 
