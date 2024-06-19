@@ -54,48 +54,7 @@ p {
     font-size: var(--clamp-txt);
     font-family: var(--txt);
 }
-li {
-    list-style: none;
-}
 
-/* navbar */
-.wrap-nav {
-    margin: auto;
-    margin-top: 10px;
-    padding: 8px;
-    width: 90vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--pink);
-    border-radius: 5px;
-}
-.wrap-nav a:hover {
-    text-decoration: underline;
-}
-.wrap-nav .radius {
-    margin: 0 6px;
-    padding: 4px 15px;
-    border: 1px solid var(--pink);
-    border-radius: 5px;
-}
-.wrap-nav .radius:hover {
-    color: var(--crem);
-    background-color: var(--pink);
-    text-decoration: none;
-}
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.logo {
-    font-family: var(--pro);
-    font-size: 2.3rem;
-    font-weight: 900;
-    margin: 0 3%;
-}
 
 /* hero */
 .hero {
@@ -179,7 +138,7 @@ li {
 .dungeon-ads p {
     margin-top: 5%;
     padding: 5%;
-    background-color: var(--pink);
+    background-color: var(--ijo);
     color: var(--black);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -196,21 +155,20 @@ li {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: .4rem;
+    gap: 10%;
 
 }
 .col-about {
     width: 100%;
+    margin: 15% 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: .4rem;
 }
-.rev {
-    flex-direction: column-reverse;
-}
 .promise-ads {
+    bottom: 0;
     width: 100%;
     padding: 10px;
     color: var(--black);
@@ -219,18 +177,21 @@ li {
     margin-top: 15px;
 }
 .img-ads {
-    width: 100%;
+    width: 80%;
     overflow: hidden;
-    background-color: var(--pink);
-    border-radius: 5px;
+    border-radius: 300px 300px 0 0;
+    -webkit-border-radius: 300px 300px 0 0;
+    -moz-border-radius: 300px 300px 0 0;
+    -ms-border-radius: 300px 300px 0 0;
+    -o-border-radius: 300px 300px 0 0;
 }
 .col-about img {
-    width: 50%;
+    width: 100%;
 }
 
 /* PRICE TAG */
 .price-tag {
-    margin: 10% auto;
+    margin: 20% auto;
 }
 .tit-price h1 {
     color: var(--pink);
@@ -258,7 +219,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     padding: 5%;
     border: 1px solid var(--crem);
     border-radius: 5px;
@@ -278,18 +239,22 @@ li {
 }
 
 .price-pack h3 {
+    width: 100%;
     margin-top: 10px;
     font-size: clamp(2.5rem, 2vw, 3rem);
     font-weight: 100;
+    text-align: center;
     color: var(--ijo);
 }
 .price-pack p {
+    font-size: 2rem;
     text-decoration: line-through;
-    text-align: center;
-    margin-bottom: 5%;
+    text-align: start;
+    margin-bottom: 1rem;
 }
 .price-pack a {
     width: 100%;
+    margin: 1rem 0;
     padding: 10px;
     font-size: var(--clamp-btn);
     font-family: var(--txt);
@@ -310,17 +275,19 @@ li {
     border-radius: 5px;
 }
 .feat ul {
-    list-style: square;
+    margin-top: 1rem;
     padding: 0;
 }
 .feat ul li {
+    list-style: none;
     margin-bottom: .4rem;
     font-family: var(--txt);
-    font-size: var(--clamp-txt);
+    font-size: 1rem;
 }
 
 /* call action home */
 .footer {
+    width: 100%;
     position: absolute;
 }
 canvas {
@@ -334,14 +301,13 @@ canvas {
     display: flex;
     justify-content: center;
 }
-.wrap-call {
+.wrap-txt {
     width: 100%;
-    height: 50vh;
     display: flex;
     justify-content: center;
 }
 .area-txt {
-    width: 75%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -370,12 +336,17 @@ canvas {
     text-align: center;
     color: var(--ijo);
 }
+.txt-footer h1 {
+    font-size: 5rem;
+
+}
 .txt-footer span {
     color: var(--pink);
 }
 .txt-footer p {
+    padding: 0 20%;
     margin-top: .4rem;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: var(--clamp-btn);
 }
 
 
@@ -442,7 +413,75 @@ canvas {
     border-radius: 5px;
 }
 
-/* call action service.html */
+/* guild.html */
+.team {
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 30%;
+}
+.team img {
+    width: 100%;
+    border-radius: 5px;
+}
+.team p {
+    text-align: center;
+}
+
+.team h1 {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+.team-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.team-member p {
+    text-align: left;
+}
+.team-member .img-team {
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--crem);
+    background-size: cover;
+    background-position: center center;
+    aspect-ratio: 1 / 1;
+    border-radius: 300px 300px 0 0;
+}
+.cd {
+    background-image: url(/images/illustrasi/cd-p.jpg);
+}
+.cd:hover {
+    background-image: url(/images/illustrasi/cd.jpg);
+}
+.bd {
+    background-image: url(/images/illustrasi/bd-p.jpg);
+}
+.bd:hover {
+    background-image: url(/images/illustrasi/bd.jpg);
+}
+.fd {
+    background-image: url(/images/illustrasi/fd-p.jpg);
+}
+.fd:hover {
+    background-image: url(/images/illustrasi/fd.jpg);
+}
+.cm {
+    background-image: url(/images/illustrasi/cm-p.jpg);
+}
+.cm:hover {
+    background-image: url(/images/illustrasi/cm.jpg);
+}
+
+
+
+
+/* call action service.html, work.html, guild.html */
+.call-action {
+    margin-bottom: 25%;
+}
 .wrap-call {
     width: 100%;
     display: flex;
@@ -511,6 +550,9 @@ canvas {
     }
     .col-about {
         flex-direction: row;
+    }
+    .promise-ads {
+        margin-top: 25%;
     }
     .wrap-price {
         flex-direction: row;

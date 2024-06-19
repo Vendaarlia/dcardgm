@@ -25,7 +25,6 @@ a {
 
 /* navbar */
 .wrap-nav {
-    margin: auto;
     margin: 10px auto;
     padding: 8px;
     width: 90vw;
@@ -68,6 +67,14 @@ a {
     justify-content: center;
     width: fit-content;
 }
+.copyright p {
+    font-size: .8rem;
+    text-align: center;
+    margin: 10px;
+}
+.copyright a {
+    font-size: .8rem;
+}
 
 /* worklist template */
 #worksList {
@@ -86,18 +93,36 @@ a {
 .img-work {
     width: 100%;
     height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--ijo);
     background-position: 50%;
     background-size: cover;
     overflow: hidden;
     border: 1px solid var(--crem);
-    border-radius: 5px;
+    border-radius: 300px 300px 0 0;
 }
-.work-ads h3, p, a {
+.gif-work {
+    width: 150%;
+    display: none;
+
+}
+.img-work:hover .gif-work {
+    display: block;
+}
+.work-ads span {
+    list-style: none;
+    font-size: var(--clamp-txt);
+    padding: 5px 10px;
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: 100px;
+}
+.work-ads h3, p, a, span {
     margin: 5% 0;
 }
 .work-ads a {
-    margin-top: .4rem;
     padding: 20px;
     text-align: center;
     font-size: var(--clamp-btn);
@@ -128,8 +153,11 @@ a {
         flex-direction: row;
     }
     .wrap-work {
-        width: 40vw;
+        width: 35vw;
     }
+    .img-work {
+        height: 60vh;
 
+    }
 
 }

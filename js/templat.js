@@ -28,7 +28,7 @@ navElement.innerHTML = navbar;
 
 // footer component
 const footer = `
-<div class="wrap-nav footerz">
+    <div class="wrap-nav footerz">
         <a class="radius" href="guild.html">Guild</a>
         <a class="radius" href="work.html">Work</a>
 
@@ -41,7 +41,10 @@ const footer = `
 
         <a class="radius" href="https://wa.me/881026849709" target="_blank">Chat now</a>
         <a class="radius" href="https://www.instagram.com/dcardgm/" target="_blank">Instagram</a>
-      </div>
+    </div>
+    <div class="copyright">
+        <p>2023 CoffeRight <a href="index.html" target="_blank">DCARDGM.COM</a></p>
+    </div>
 `;
 
 const footElement = document.getElementById("footer");
@@ -54,19 +57,21 @@ import { work } from './workData.js';
 document.addEventListener('DOMContentLoaded', () => {
     try {
         const worksListElement = document.getElementById('worksList');
-        
+
         if (!worksListElement) {
             throw new Error('Element with ID "worksList" not found.');
         }
 
-        const workslistHTML = work.map(({ image, title, description, link }) => `
+        const workslistHTML = work.map(({ gif, image, title, description, lable, link }) => `
             <div class="wrap-work">
                 <div class="col-work">
-                    <div style="background-image:url(${image})" class="img-work">
+                    <div style="background-image:url(${image})" class="img-work" loading="lazy">
+                        <img class="gif-work" src="${gif}" alt="" loading="lazy">
                     </div>
                     <div class="work-ads">
                         <h3>${title}</h3>
                         <p>${description}</p>
+                        <span>${lable}</span>
                         <a class="live-demo" href="${link}" target="_blank">Live Demo</a>
                     </div>
                 </div>
